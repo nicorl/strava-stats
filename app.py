@@ -5,9 +5,9 @@ import datetime
 
 # --- CONFIGURACIÓN ---
 # Cargar credenciales seguras desde Streamlit
-CLIENT_ID = st.secrets["general"]["client_id"]
-CLIENT_SECRET = st.secrets["general"]["client_secret"]
-REFRESH_TOKEN = st.secrets["general"]["refresh_token"]
+CLIENT_ID = st.secrets["STRAVA_CLIENT_ID"]
+CLIENT_SECRET = st.secrets["STRAVA_CLIENT_SECRET"]
+REFRESH_TOKEN = st.secrets["STRAVA_REFRESH_TOKEN"]
 
 @st.cache_data(ttl=3600) # Cache para no llamar a la API en cada recarga (1 hora)
 def get_strava_activities():
